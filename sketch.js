@@ -190,8 +190,10 @@ function detectCollision(){
 }
 
 function reset(){
-    if(keyWentDown("space")){
+    if(keyWentDown("space") || touches.length > 0){
             gameState = start
+
+            touches = []
 
             obstaclesGroup.destroyEach()
             
