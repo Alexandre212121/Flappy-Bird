@@ -142,10 +142,17 @@ function birdMovement(){
 function generateObstacles(){
     if(frameCount % 80 == 0){
         var k = 400 * Math.random()
-
-        var obstacleInf = createSprite(950, 400 + k, 50, 450)
-        var obstacleSup = createSprite(950, -200 + k, 50, 450)
         
+        let gamma = Math.random(100, 150)
+        
+        var obstacleSup = createSprite(950, -200 + k, 50, 450)
+
+        let sigma = obstacleSup.y + obstacleSup.height/2 + gamma
+
+        var obstacleInf = createSprite(obstacleSup.x,  sigma, 50, 450)
+
+        //var obstacleInf = createSprite(950, 400 + k, 50, 450)
+    
         obstacleInf.isBottom = true
         obstacleInf.passed = false
 
@@ -167,10 +174,6 @@ function generateObstacles(){
         obstacleInf.lifetime = 950/2
         obstacleSup.lifetime = 950/2
     }
-    
-    
-    
-
     
 
     
