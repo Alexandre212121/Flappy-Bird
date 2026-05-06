@@ -147,11 +147,11 @@ function generateObstacles(){
         
         var obstacleSup = createSprite(950, -200 + k, 50, 450)
 
-        let sigma = obstacleSup.y + obstacleSup.height + gamma
+        //let sigma = obstacleSup.y + obstacleSup.height + gamma
 
-        var obstacleInf = createSprite(obstacleSup.x,  sigma, 50, 450)
+        //var obstacleInf = createSprite(obstacleSup.x,  sigma, 50, 450)
 
-        //var obstacleInf = createSprite(950, 400 + k, 50, 450)
+        var obstacleInf = createSprite(950, 400 + k, 50, 450)
     
         obstacleInf.isBottom = true
         obstacleInf.passed = false
